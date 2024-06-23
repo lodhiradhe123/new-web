@@ -4,8 +4,8 @@ var router = express.Router();
 var User = require("../models/user");
 var productSchema = require("../models/product");
 
-
-const bcrypt = require("bcrypt");
+const bcrypt = require('bcryptjs');
+// const bcrypt = require("bcrypt");
 var jwt = require("jsonwebtoken");
 var cookieParser = require("cookie-parser");
 
