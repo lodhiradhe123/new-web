@@ -1,24 +1,21 @@
 <%- include("./partials/header") %>
-<%- include('./partials/nav') %>
 
  
   
 <div class="centerprofile">
  <a href="/"> <i class=" homearrow ri-home-8-line"></i></a>
   <div class="image">
-    
     <img src="/images/defaultimage.jpg" alt="" class="image">
     <img src="/images/<%=user.profileimage%>" alt="" class="image">
-   
-    <a href=""><i class="editimage ri-image-edit-fill"></i></a>
+    <!-- <a href=""><i class="editimage ri-image-edit-fill"></i></a> -->
   </div>
   
   <div class="profile">
-    <h1>Name:- <%=user.name%></h1>
-    <h1>User_name:- <%=user.username%></h1>
+    <h1>Name:-<%=user.name%></h1>
+    <h1>User_name:-<%=user.username%></h1>
     <h1>email:-<%=user.email%></h1>
    
-    <div>
+    <div class="deleteupdate">
       <a href="/user/delete/<%=user._id%>"><button class="deleteuser">delete user</button></a>
       
       <a href="/user/update/<%=user._id%>"><button class="updateuser">update user</button></a>
@@ -29,18 +26,18 @@
     <div class="icon">
       <a
         href="/user/logout"
-        class="text-2xl bg-blue-200 hover:bg-yellow-100 border-2 border-black rounded-lg p-4"
+        class="logout text-2xl bg-blue-200 hover:bg-yellow-100 border-2 border-black rounded-lg p-4"
         ><i class="ri-logout-circle-line"></i
       ></a>
       <a
         href="/user/resetpassword"
-        class="text-2xl text-center bg-blue-200 hover:bg-yellow-100 p-2 border-2 border-black rounded-lg"
+        class="reset text-2xl text-center bg-blue-200 hover:bg-yellow-100 p-2 border-2 border-black rounded-lg"
         >Reset <i class="ri-key-2-line"></i
       ></a>
 
       <a
         href="/product/createproduct"
-        class="text-2xl text-center bg-blue-200 hover:bg-yellow-100 border-2 border-black rounded-lg"
+        class="create text-2xl text-center bg-blue-200 hover:bg-yellow-100 border-2 border-black rounded-lg"
         >Create <i class="ri-add-box-line"></i
       ></a>
     </div>
